@@ -45,26 +45,32 @@
 #  --access-key-secret AccessKeySecret
 
 
+# -- 程序安装 --
 wget -c https://aliyuncli.alicdn.com/aliyun-cli-linux-latest-amd64.tgz
 
 #aliyun-cli-linux-latest-amd64.tgz
 tar -xzvf aliyun-cli-linux-latest-amd64.tgz
 
 sudo cp aliyun /usr/local/bin
+# -- 程序安装 ^ --
 
-
-
+# -- 参数变量定义 --
 profile_name='001'
 mode='AK'
 region='cn-hangzhou'
 ak_id='' #AccessKeyId
 ak_se='' #AccessKeySecret
+# -- 参数变量定义 ^ --
 
+# -- cli配置添加 --
 aliyun configure set \
   --profile $profile_name \
   --mode $mode \
   --region $region \
   --access-key-id $ak_id \
   --access-key-secret $ak_se
+# -- cli配置添加 ^ --
 
+# -- cli配置查看 --
 aliyun configure list
+# -- cli配置查看 ^ --
